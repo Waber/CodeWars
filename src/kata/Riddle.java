@@ -14,9 +14,9 @@ public class Riddle {
         Number b = createNumB(a);
 
         if(a == b){
-            num += num++ + num--; // num == 6; num-- nigdy się nie wykona ze względu na postinkrementację
+            num += num++ + num--; //  num-- = 3; num-- nie wykona się ze względu na postinkrementację
         } else {
-            num += num++ + num-- + num--; //num == 9
+            num += num++ + num-- + num--; //ostanie num-- = 2
         }
 
         switch (num){
