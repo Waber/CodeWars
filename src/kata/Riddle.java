@@ -14,9 +14,9 @@ public class Riddle {
         Number b = createNumB(a);
 
         if(a == b){
-            num += num++ + num--;
+            num += num++ + num--; // num == 6; num-- nigdy się nie wykona ze względu na postinkrementację
         } else {
-            num += num++ + num-- + num--;
+            num += num++ + num-- + num--; //num == 9
         }
 
         switch (num){
@@ -37,7 +37,7 @@ public class Riddle {
 
     private static Integer createNumA(Integer x)
     {
-        return ++x << 1; // dzięki preinkrementacji masz wartość 1 (0001) dzięki bitwise << przesuwasz bity o 1 (0010) czyli masz 2
+        return ++x << 1;
     }
 
     private static Number createNumB(Number num)
